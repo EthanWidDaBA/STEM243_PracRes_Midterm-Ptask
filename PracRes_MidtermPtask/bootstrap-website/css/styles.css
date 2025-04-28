@@ -1,0 +1,62 @@
+body {
+    background-image: url('../banig_wallpaper.jpg'); /* Set background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-position: center; /* Center the image */
+    color: #2e2e2e; /* Dark gray text for better readability */
+    font-family: "Comic Sans MS", "Brush Script MT", cursive; /* Cursive font */
+}
+
+.banner {
+    background-color: #007bff;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.btn-custom {
+    margin: 0 10px;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #dee2e6; /* Light border for subtle separation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.card-title {
+    color: #007bff; /* Blue color for the title */
+}
+
+.category-btn {
+    font-size: 1.5rem; /* Enlarge the text */
+    padding: 1rem 2rem; /* Add padding for larger buttons */
+    opacity: 0.9; /* Slight transparency */
+    width: 100%; /* Maximize button width */
+    max-width: 300px; /* Limit maximum width */
+    background-color: #007bff; /* Blue background for buttons */
+    color: #ffffff; /* White text for buttons */
+    border: none; /* Remove border */
+}
+
+.category-btn:hover {
+    opacity: 1; /* Remove transparency on hover */
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.footer {
+    background-color: #2e2e2e; /* Dark gray footer background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
