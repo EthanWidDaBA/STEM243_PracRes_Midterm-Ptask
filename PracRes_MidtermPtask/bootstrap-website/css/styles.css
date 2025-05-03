@@ -1,5 +1,5 @@
 body {
-    background-image: url('../banig_wallpaper.jpg'); /* Set background image */
+    background-image: url('banig_wallpaper.jpg'); /* Set background image */
     background-size: cover; /* Ensure the image covers the entire background */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the background fixed during scrolling */
@@ -9,14 +9,26 @@ body {
 }
 
 .banner {
-    background-color: #007bff;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 50px 0;
     text-align: center;
 }
 
 .buttons {
     margin: 20px 0;
+}
+
+.buttons-section {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Add space between the buttons */
+}
+
+.button-container {
+    position: relative;
+    text-align: center;
+    width: 200px; /* Set a fixed width for the buttons to keep them aligned */
 }
 
 .btn-custom {
@@ -36,19 +48,37 @@ body {
 }
 
 .category-btn {
-    font-size: 1.5rem; /* Enlarge the text */
-    padding: 1rem 2rem; /* Add padding for larger buttons */
-    opacity: 0.9; /* Slight transparency */
-    width: 100%; /* Maximize button width */
-    max-width: 300px; /* Limit maximum width */
-    background-color: #007bff; /* Blue background for buttons */
-    color: #ffffff; /* White text for buttons */
-    border: none; /* Remove border */
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    padding: 15px 20px; /* Increase padding for larger buttons */
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make the button fill the container width */
+    display: inline-block;
+    text-align: center;
 }
 
 .category-btn:hover {
-    opacity: 1; /* Remove transparency on hover */
     background-color: #0056b3; /* Darker blue on hover */
+}
+
+.info {
+    display: none; /* Hidden by default */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%; /* Match the width of the button */
+}
+
+.button-container:hover .info {
+    display: block; /* Show the info when hovering over the button container */
 }
 
 .footer {
