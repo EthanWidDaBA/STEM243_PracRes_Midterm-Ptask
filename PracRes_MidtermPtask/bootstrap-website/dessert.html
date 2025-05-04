@@ -4,56 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Desserts</title>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
     body {
       font-family: 'Inter', sans-serif;
-    }
-
-    .btn:focus, .btn:active {
-      box-shadow: none !important;
-      outline: none !important;
-    }
-
-    .image-card {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-
-    .image-card img {
-      width: 100%;
-      height: auto;
-    }
-
-    .overlay-text {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 5px;
-      font-size: 1.2em;
-      border-radius: 4px;
-    }
-
-    .hover-description {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    .image-card:hover .hover-description {
-      display: block;
     }
 
     .sidebar {
@@ -76,33 +39,74 @@
     #main-content {
       transition: none;
     }
+
+    .card-img {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    .overlay-desc {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      opacity: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.875rem;
+      padding: 0.5rem;
+      text-align: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .overlay-desc {
+      opacity: 1;
+    }
   </style>
 </head>
 <body class="special-page p-4">
 
-  <!-- Menu Button Section -->
+  <!-- Header with Menu Button -->
   <div class="d-flex justify-content-between align-items-center mb-4">
     <div class="d-flex align-items-center">
       <button id="menu-button" class="btn me-4">
-        <!-- Hamburger Menu Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
-          <line x1="4" x2="20" y1="12" y2="12"/>
-          <line x1="4" x2="20" y1="6" y2="6"/>
-          <line x1="4" x2="20" y1="18" y2="18"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
         </svg>
       </button>
       <h1 class="fs-3 fw-semibold text-dark">Dessert Menu</h1>
     </div>
   </div>
 
-  <!-- Sidebar Section -->
+  <!-- Sidebar -->
   <div id="sidebar" class="sidebar">
-    <!-- Inner Close Button -->
     <button id="close-button" class="btn btn-light position-absolute top-0 end-0 m-3">
-      <!-- Close Icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
       </svg>
     </button>
 
@@ -116,70 +120,66 @@
     </ul>
   </div>
 
-  <!-- Main Content -->
-  <div id="main-content" class="container-fluid mt-4">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-      <!-- Column 1 -->
-      <div class="col">
-        <a href="halo-halo.html" class="text-decoration-none">
-          <div class="image-card">
-            <img src="images/halo-halo.jpg" alt="Halo-Halo">
-            <div class="overlay-text">Halo-Halo</div>
-            <div class="hover-description">A refreshing and famous Filipino dessert with shaved ice and a bunch of different toppings.</div>
-          </div>
-        </a>
-      </div>
+  <!-- Main Content Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
 
-      <!-- Column 2 -->
-      <div class="col">
-        <a href="buko-pandan.html" class="text-decoration-none">
-          <div class="image-card">
-            <img src="images/halo-halo.jpg" alt="Buko Pandan">
-            <div class="overlay-text">Buko Pandan</div>
-            <div class="hover-description">A sweet and creamy Filipino dessert with coconut pandan leaves and jelly.</div>
-          </div>
-        </a>
+    <!-- Halo-Halo -->
+    <a href="halo-halo.html" class="relative group w-40 h-500 rounded-lg shadow-md overflow-hidden card">
+      <img src="css/halo-halo.jpg" alt="Halo-Halo" class="card-img">
+      <div class="overlay">
+        <span>Halo-Halo</span>
       </div>
+      <div class="overlay-desc">
+        A refreshing dessert with shaved ice and mixed toppings.
+      </div>
+    </a>
 
-      <!-- Column 3 -->
-      <div class="col">
-        <a href="page3.html" class="text-decoration-none">
-          <div class="image-card">
-            <img src="images/halo-halo.jpg" alt="Leche Flan">
-            <div class="overlay-text">Leche Flan</div>
-            <div class="hover-description">A rich and creamy custard dessert with a layer of soft caramel.</div>
-          </div>
-        </a>
+    <!-- Buko Pandan -->
+    <a href="buko-pandan.html" class="relative group w-40 h-64 rounded-lg shadow-md overflow-hidden card">
+      <img src="css/buko-pandan.jpg" alt="Buko Pandan" class="card-img">
+      <div class="overlay">
+        <span>Buko Pandan</span>
       </div>
+      <div class="overlay-desc">
+        Coconut and pandan jelly dessert with creamy milk.
+      </div>
+    </a>
 
-      <!-- Column 4 -->
-      <div class="col">
-        <a href="page4.html" class="text-decoration-none">
-          <div class="image-card">
-            <img src="images/halo-halo.jpg" alt="Yema Cake">
-            <div class="overlay-text">Yema Cake</div>
-            <div class="hover-description">A soft and fluffy sponge cake with a sweet and sticky yema (custard) topping.</div>
-          </div>
-        </a>
+    <!-- Leche Flan -->
+    <a href="leche-flan.html" class="relative group w-40 h-64 rounded-lg shadow-md overflow-hidden card">
+      <img src="css/leche-flan.jpg" alt="Leche Flan" class="card-img">
+      <div class="overlay">
+        <span>Leche Flan</span>
       </div>
-    </div>
+      <div class="overlay-desc">
+        A silky caramel custard dessert.
+      </div>
+    </a>
+
+    <!-- Yema Cake -->
+    <a href="yema-cake.html" class="relative group w-40 h-100 rounded-lg shadow-md overflow-hidden card">
+      <img src="css/yema-cake.jpg" alt="Yema Cake" class="card-img">
+      <div class="overlay">
+        <span>Yema Cake</span>
+      </div>
+      <div class="overlay-desc">
+        Fluffy cake topped with sweet custard yema.
+      </div>
+    </a>
+
   </div>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS to toggle sidebar and content shift -->
+  <!-- JS to Toggle Sidebar -->
   <script>
-    const menuButton = document.getElementById('menu-button');
+    const menuBtn = document.getElementById('menu-button');
     const sidebar = document.getElementById('sidebar');
-    const closeButton = document.getElementById('close-button');
-    const mainContent = document.getElementById('main-content');
+    const closeBtn = document.getElementById('close-button');
 
-    menuButton.addEventListener('click', () => {
+    menuBtn.addEventListener('click', () => {
       sidebar.classList.add('active');
     });
 
-    closeButton.addEventListener('click', () => {
+    closeBtn.addEventListener('click', () => {
       sidebar.classList.remove('active');
     });
   </script>
