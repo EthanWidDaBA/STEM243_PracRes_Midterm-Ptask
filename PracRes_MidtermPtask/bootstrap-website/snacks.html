@@ -11,12 +11,14 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Fonts (from index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Comic Sans MS", "Brush Script MT", cursive; /* Updated font-family */
+      background-color: #f5e8dc; /* Background color */
+      font-size: 1.2rem; /* Increased base font size */
     }
 
     .sidebar {
@@ -59,7 +61,7 @@
       align-items: center;
       color: white;
       font-weight: bold;
-      font-size: 1.25rem;
+      font-size: 1.5rem; /* Increased font size for overlay text */
     }
 
     .overlay-desc {
@@ -72,14 +74,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 0.875rem;
+      font-size: 1rem; /* Default font size for description */
       padding: 0.5rem;
       text-align: center;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease, font-size 0.3s ease; /* Smooth transition for font size */
     }
 
     .card:hover .overlay-desc {
       opacity: 1;
+      font-size: 1.2rem; /* Increased font size on hover */
     }
   </style>
 </head>
@@ -96,7 +99,7 @@
           <line x1="4" x2="20" y1="18" y2="18" />
         </svg>
       </button>
-      <h1 class="fs-3 fw-semibold text-dark">Ulam Menu</h1>
+      <h1 class="fs-3 fw-semibold text-dark">Snacks Menu</h1>
     </div>
   </div>
 
@@ -125,9 +128,10 @@
   <!-- Main Content Grid -->
   <div class="grid grid-cols-1 md:grid-cols-4 gap-0 h-screen">
 
+  
     <!-- Taho -->
     <a href="/PracRes_MidtermPtask/recipe_pages/snacks_separate_pages/taho.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
-      <img src="imagesforfood/snacks/taho.jpg" alt="Taho" class="card-img">
+      <img src="/PracRes_MidtermPtask/imagesforfood/snacks/taho.png" alt="Taho" class="card-img">
       <div class="overlay">
         <span>Taho</span>
       </div>
@@ -138,18 +142,18 @@
 
     <!-- Turon -->
     <a href="/PracRes_MidtermPtask/recipe_pages/snacks_separate_pages/turon.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
-      <img src="imagesforfood/snacks/turon.jpg" alt="Turon" class="card-img">
+      <img src="/PracRes_MidtermPtask/imagesforfood/snacks/turon.jpg" alt="Turon" class="card-img">
       <div class="overlay">
         <span>Turon</span>
       </div>
       <div class="overlay-desc">
-        A crispy fried snack made with banana and jackfruit wrapped in spring roll wrappers.
+        A crispy fried snack made with banana slices and jackfruit wrapped in spring roll wrappers.
       </div>
     </a>
 
     <!-- Puto -->
     <a href="/PracRes_MidtermPtask/recipe_pages/snacks_separate_pages/puto.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
-      <img src="imagesforfood/snacks/puto.jpg" alt="Puto" class="card-img">
+      <img src="/PracRes_MidtermPtask/imagesforfood/snacks/puto.jpg" alt="Puto" class="card-img">
       <div class="overlay">
         <span>Puto</span>
       </div>
@@ -159,13 +163,13 @@
     </a>
 
     <!-- Banana Cue -->
-    <a href="/PracRes_MidtermPtask/recipe_pages/snacks_separate_pages/banana-cue.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
-      <img src="imagesforfood/snacks/banana-cue.jpg" alt="Banana Cue" class="card-img">
+    <a href="/PracRes_MidtermPtask/recipe_pages/snacks_separate_pages/bananacue.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
+      <img src="/PracRes_MidtermPtask/imagesforfood/snacks/bananacue.jpg" alt="Banana Cue" class="card-img">
       <div class="overlay">
         <span>Banana Cue</span>
       </div>
       <div class="overlay-desc">
-        Deep-fried bananas coated in caramelized sugar and skewered on sticks.
+        A popular street food made with deep-fried caramelized bananas on skewers.
       </div>
     </a>
 
