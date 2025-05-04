@@ -86,6 +86,7 @@ body {
     justify-content: center;
     text-align: center; /* Center-align the text */
     font-weight: bold; /* Make the title bold */
+    font-size: 1.8rem; /* Increase font size of the title */
 }
 
 /* Buttons inside feature cards */
@@ -106,7 +107,7 @@ body {
     background-color: white; /* White background for the description box */
     color: #2e2e2e; /* Dark gray text for readability */
     padding: 15px; /* Add padding inside the description box */
-    font-size: 0.9rem; /* Slightly smaller font size */
+    font-size: 1.2rem; /* Increase font size of the description */
     border-top: 1px solid #dee2e6; /* Subtle border to separate the image and description */
     text-align: center; /* Center-align the text */
     margin-top: 10px;
