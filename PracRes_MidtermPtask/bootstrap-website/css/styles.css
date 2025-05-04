@@ -1,0 +1,114 @@
+body {
+    background-image: url('banig_wallpaper.jpg'); /* Set background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed during scrolling */
+    background-position: center; /* Center the image */
+    color: #2e2e2e; /* Dark gray text for better readability */
+    font-family: "Comic Sans MS", "Brush Script MT", cursive; /* Cursive font */
+}
+
+/* Banner Section */
+.banner {
+    background-color: #f5e8dc; /* Super light brown color */
+    color: #2e2e2e; /* Dark gray text for contrast */
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 2px solid #d2b48c; /* Optional: Add a subtle border to complement the lighter brown */
+}
+
+.card {
+    background-color: #ffffff; /* White background for cards */
+    border: 1px solid #dee2e6; /* Light border for subtle separation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.card-title {
+    color: #007bff; /* Blue color for the title */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #f5e8dc; /* Super light brown color */
+    color: #2e2e2e; /* Dark gray text for contrast */
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #d2b48c; /* Optional: Add a subtle border to complement the lighter brown */
+}
+
+/* General styles for feature cards */
+.feature-card {
+    border: none; /* Remove default card border */
+    overflow: hidden; /* Ensure content stays within the card */
+    margin-bottom: 20px; /* Add spacing between rows */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 250px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.feature-card img {
+    width: 100%; /* Make the image span the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure no extra spacing below the image */
+}
+
+/* Specific background images for each card */
+.snacks-card {
+    background-image: url('taho_featurecard.jpg');
+}
+
+.ulam-card {
+    background-image: url('adobo_featurecard.jpg');
+}
+
+.dessert-card {
+    background-image: url('halohalo_featurecard.jpeg'); 
+}
+
+/* Ensure text is readable */
+.feature-card .card-body {
+    position: absolute; /* Position the card body absolutely within the feature card */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make it cover the full width of the feature card */
+    height: 100%; /* Make it cover the full height of the feature card */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Keep the rounded corners */
+    display: flex; /* Center the content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center-align the text */
+}
+
+/* Buttons inside feature cards */
+.feature-card .btn-primary {
+    background-color: #C5832B; /* Set button background color to #C5832B */
+    border-color: #C5832B; /* Match the border color */
+    color: white; /* Ensure the text is readable */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.feature-card .btn-primary:hover {
+    background-color: #A66A21; /* Slightly darker shade for hover effect */
+    border-color: #A66A21; /* Match the border color on hover */
+}
+
+/* Description Section */
+.card-description {
+    background-color: white; /* White background for the description box */
+    color: #2e2e2e; /* Dark gray text for readability */
+    padding: 15px; /* Add padding inside the description box */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    border-top: 1px solid #dee2e6; /* Subtle border to separate the image and description */
+    text-align: center; /* Center-align the text */
+    margin-top: 10px;
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
