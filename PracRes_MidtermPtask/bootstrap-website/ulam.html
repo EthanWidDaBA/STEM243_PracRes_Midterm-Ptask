@@ -11,12 +11,14 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Fonts (from index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Comic Sans MS", "Brush Script MT", cursive; /* Updated font-family */
+      background-color: #f5e8dc; /* Background color */
+      font-size: 1.2rem; /* Increased base font size */
     }
 
     .sidebar {
@@ -59,7 +61,7 @@
       align-items: center;
       color: white;
       font-weight: bold;
-      font-size: 1.25rem;
+      font-size: 1.5rem; /* Increased font size for overlay text */
     }
 
     .overlay-desc {
@@ -72,14 +74,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 0.875rem;
+      font-size: 1rem; /* Default font size for description */
       padding: 0.5rem;
       text-align: center;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease, font-size 0.3s ease; /* Smooth transition for font size */
     }
 
     .card:hover .overlay-desc {
       opacity: 1;
+      font-size: 1.2rem; /* Increased font size on hover */
     }
   </style>
 </head>
@@ -138,7 +141,7 @@
 
     <!-- Kare-Kare -->
     <a href="/PracRes_MidtermPtask/recipe_pages/ulam_separate_pages/kare-kare.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
-      <img src="imagesforfood/ulam/kare-kare.jpg" alt="Kare-Kare" class="card-img">
+      <img src="/PracRes_MidtermPtask/imagesforfood/ulam/karekare.jpg" alt="Kare-Kare" class="card-img">
       <div class="overlay">
         <span>Kare-Kare</span>
       </div>
@@ -149,7 +152,7 @@
 
     <!-- Sinigang -->
     <a href="/PracRes_MidtermPtask/recipe_pages/ulam_separate_pages/sinigang.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
-      <img src="imagesforfood/ulam/sinigang.jpg" alt="Sinigang" class="card-img">
+      <img src="/PracRes_MidtermPtask/imagesforfood/ulam/sinigang.jpg" alt="Sinigang" class="card-img">
       <div class="overlay">
         <span>Sinigang</span>
       </div>
@@ -160,7 +163,7 @@
 
     <!-- Tinola -->
     <a href="/PracRes_MidtermPtask/recipe_pages/ulam_separate_pages/tinola.html" class="relative group w-full h-full rounded-none shadow-md overflow-hidden card">
-      <img src="imagesforfood/ulam/tinola.png" alt="Tinola" class="card-img">
+      <img src="/PracRes_MidtermPtask/imagesforfood/ulam/tinola.png" alt="Tinola" class="card-img">
       <div class="overlay">
         <span>Tinola</span>
       </div>
