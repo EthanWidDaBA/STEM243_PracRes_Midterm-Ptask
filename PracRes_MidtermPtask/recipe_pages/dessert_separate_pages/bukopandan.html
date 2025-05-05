@@ -133,5 +133,21 @@
       </div>
     </div>
   </div>
+
+    <!-- JS to Toggle Sidebar -->
+    <script>
+      const menuBtn = document.getElementById('menu-button');
+      const sidebar = document.getElementById('sidebar');
+      const closeBtn = document.getElementById('close-button');
+  
+      menuBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+      });
+    </script>
+  
 </body>
 </html>
