@@ -30,6 +30,15 @@ body {
     object-fit: auto; /* Ensures the image scales properly without distortion */
 }
 
+.carousel-caption h1, .carousel-caption p {
+    display: inline-block; /* Aligns the text with the image */
+    background-color: rgba(46, 46, 46, 0.8); /* Semi-transparent dark gray background */
+    padding: 15px 30px; /* Adjust padding for size (top-bottom, left-right) */
+    border-radius: 10px; /* Rounded corners for the background */
+    color: #eeb774; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Add a shadow for better readability */
+}
+
 .card {
     background-color: #ffffff; /* White background for cards */
     border: 1px solid #dee2e6; /* Light border for subtle separation */
