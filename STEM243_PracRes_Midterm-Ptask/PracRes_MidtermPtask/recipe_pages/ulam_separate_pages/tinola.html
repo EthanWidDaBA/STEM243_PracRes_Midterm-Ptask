@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buko Pandan Recipe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Comic Sans MS", "Brush Script MT", cursive;
+      background: url('/PracRes_MidtermPtask/bootstrap-website/css/banig_wallpaper.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .backdrop {
+      background-color: rgba(210, 180, 140, 0.8); /* Semi-transparent tan color */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .sidebar {
+      width: 250px;
+      left: -250px;
+      top: 0;
+      height: 100vh;
+      background-color: #212529;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      z-index: 1040;
+      transition: left 0.3s ease;
+    }
+    .sidebar.active {
+      left: 0;
+    }
+    body *:not(h1) {
+      font-size: calc(1rem + 3px); 
+    }
+  </style>
+</head>
+<body class="special-page p-4">
+
+  <!-- Header with Menu Button -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex align-items-center">
+      <button id="menu-button" class="btn me-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+      <h1 class="fs-3 fw-semibold text-dark">Dessert Menu</h1>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="close-button" class="btn btn-light position-absolute top-0 end-0 m-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+
+    <ul class="list-unstyled mt-5">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/index.html" class="text-white text-decoration-none">Home</a></li>
+      <hr class="border-light">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/snacks.html" class="text-white text-decoration-none">Snacks</a></li>
+      <hr class="border-light">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/ulam.html" class="text-white text-decoration-none">Ulam</a></li>
+      <hr class="border-light">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/dessert.html" class="text-white text-decoration-none">Dessert</a></li>
+      <hr class="border-light">
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="backdrop">
+      <h1 class="text-center mb-4">Tinola Recipe</h1>
+      <div class="row">
+        <!-- Image Section -->
+        <div class="col-md-6 d-flex justify-content-start align-items-center">
+          <img src="/PracRes_MidtermPtask/imagesforfood/ulam/tinola.png" alt="Tinola" class="img-fluid rounded shadow" style="width: 90%; max-width: 500px;">
+        </div>
+
+        <!-- Ingredients Section -->
+        <div class="col-md-6">
+          <h3 class="mb-1">Prep Time:</h3>
+          <p class="mb-2">15 minutes</p>
+          <h3 class="mb-1">Cook Time:</h3>
+          <p class="mb-2">50 minutes</p>
+          <h3 class="mb-1">Servings:</h3>
+          <p class="mb-3">4 people</p>
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>1 tablespoon canola oil (15 ml)</li>
+            <li>1 small onion, peeled and sliced thinly (1 medium onion)</li>
+            <li>3 cloves garlic, peeled and minced (1 tablespoon)</li>
+            <li>2 thumb-sized fresh ginger, peeled and sliced (1 inch)</li>
+            <li>1 (3 to 4 pounds) whole chicken, cut into serving pieces (1.4 to 1.8 kg)</li>
+            <li>2 tablespoons fish sauce (30 ml)</li>
+            <li>5 cups water (1.2 liters)</li>
+            <li>1 small green papaya, pared, seeded and cut into 2-inch wedges (1 medium papaya)</li>
+            <li>1 bunch fresh spinach leaves, stems trimmed (200 g)</li>
+            <li>Salt and pepper, to taste</li>
+          </ul>
+          <h3>Equipment:</h3>
+          <ul>
+            <li>A large pot</li>
+            <li>Knife and cutting board</li>
+            <li>Measuring cups and spoons</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Procedures Section -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <h2>Steps:</h2>
+          <ol>
+            <li>In a pot over medium heat, heat oil. Add onions, ginger, and garlic and cook until softened.</li>
+            <li>Add chicken and cook, stirring occasionally, for about 5 to 7 minutes or until chicken starts to change color and juices run clear.</li>
+            <li>Add fish sauce and cook, stirring occasionally, for about 1 to 2 minutes.</li>
+            <li>Add water and bring to a boil, skimming scum that floats on top. Lower heat, cover and simmer for about 30 to 35 minutes or until chicken is cooked through.</li>
+            <li>Add papaya and cook for about 3 to 5 minutes or until tender yet crisp.</li>
+            <li>Season with salt and pepper to taste.</li>
+            <li>Add spinach and push down into broth. Cook until just wilted. Serve hot.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- JS to Toggle Sidebar -->
+    <script>
+      const menuBtn = document.getElementById('menu-button');
+      const sidebar = document.getElementById('sidebar');
+      const closeBtn = document.getElementById('close-button');
+  
+      menuBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+      });
+    </script>
+  
+</body>
+</html>

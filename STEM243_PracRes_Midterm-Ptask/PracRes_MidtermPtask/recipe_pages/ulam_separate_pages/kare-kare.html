@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buko Pandan Recipe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Comic Sans MS", "Brush Script MT", cursive;
+      background: url('/PracRes_MidtermPtask/bootstrap-website/css/banig_wallpaper.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .backdrop {
+      background-color: rgba(210, 180, 140, 0.8); /* Semi-transparent tan color */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .sidebar {
+      width: 250px;
+      left: -250px;
+      top: 0;
+      height: 100vh;
+      background-color: #212529;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      z-index: 1040;
+      transition: left 0.3s ease;
+    }
+    .sidebar.active {
+      left: 0;
+    }
+    body *:not(h1) {
+      font-size: calc(1rem + 3px); 
+    }
+  </style>
+</head>
+<body class="special-page p-4">
+
+  <!-- Header with Menu Button -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex align-items-center">
+      <button id="menu-button" class="btn me-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+      <h1 class="fs-3 fw-semibold text-dark">Dessert Menu</h1>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="close-button" class="btn btn-light position-absolute top-0 end-0 m-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+
+    <ul class="list-unstyled mt-5">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/index.html" class="text-white text-decoration-none">Home</a></li>
+      <hr class="border-light">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/snacks.html" class="text-white text-decoration-none">Snacks</a></li>
+      <hr class="border-light">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/ulam.html" class="text-white text-decoration-none">Ulam</a></li>
+      <hr class="border-light">
+      <li><a href="/PracRes_MidtermPtask/bootstrap-website/dessert.html" class="text-white text-decoration-none">Dessert</a></li>
+      <hr class="border-light">
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="backdrop">
+      <h1 class="text-center mb-4">Kare Kare Recipe</h1>
+      <div class="row">
+        <!-- Image Section -->
+        <div class="col-md-6 d-flex justify-content-start align-items-center">
+          <img src="/PracRes_MidtermPtask/imagesforfood/ulam/karekare.jpg" alt="Kare Kare" class="img-fluid rounded shadow" style="width: 90%; max-width: 500px;">
+        </div>
+
+        <!-- Ingredients Section -->
+        <div class="col-md-6">
+          <h3 class="mb-1">Prep Time:</h3>
+          <p class="mb-2">30 minutes</p>
+          <h3 class="mb-1">Cook Time:</h3>
+          <p class="mb-2">3 hours</p>
+          <h3 class="mb-1">Servings:</h3>
+          <p class="mb-3">6 people</p>
+          <h3>Ingredients:</h3>
+          <ul>
+            <li>2 pounds oxtails, cut into 2-inch pieces</li>
+            <li>2 pounds bone-in English cut beef short ribs, cut into 2-inch pieces</li>
+            <li>8 cloves garlic, peeled and minced</li>
+            <li>1 medium white or yellow onion, diced</li>
+            <li>2 tablespoons vegetable oil</li>
+            <li>2 cups creamy peanut butter</li>
+            <li>3 cups water</li>
+            <li>2 (32-ounce) cartons low-sodium beef broth (about 8 cups)</li>
+            <li>1 teaspoon black peppercorns</li>
+            <li>1/2 teaspoon kosher salt</li>
+            <li>1/2 teaspoon freshly ground black pepper</li>
+            <li>1 1/2 tablespoons ground annatto or annatto (achuete) powder</li>
+            <li>1/2 cup mochiko sweet rice flour</li>
+            <li>12 ounces long beans, cut into 2-inch pieces</li>
+            <li>12 ounces Japanese or Chinese eggplants, cut into 2-inch-long pieces that are about 1/2-inch thick</li>
+            <li>12 ounces baby bok choy, halved lengthwise through the core</li>
+            <li>12 ounces banana hearts, drained if using</li>
+          </ul>
+          <h3>Equipment:</h3>
+          <ul>
+            <li>Large stockpot</li>
+            <li>Large bowl</li>
+            <li>Large pot or Dutch oven</li>
+            <li>Tongs or slotted spoon</li>
+            <li>Immersion blender (optional)</li>
+            <li>Large mixing bowl</li>
+            <li>Rimmed baking sheet (optional)</li>
+            <li>Blender (optional)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Procedures Section -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <h2>Steps:</h2>
+          <ol>
+            <li>Place 2 pounds of oxtails and 2 pounds of beef short ribs in a large bowl. Add enough cold water to cover and let sit for 20 minutes.</li>
+            <li>Drain and place the meats in a large stockpot. Add 2 (32-ounce) cartons of low-sodium beef broth, 3 cups of water, 4 peeled garlic cloves, 1 teaspoon of black peppercorns, 1/2 teaspoon of kosher salt, and 1/2 teaspoon of black pepper. Stir to combine.</li>
+            <li>Cover and bring to a boil over medium-high heat. Reduce the heat to maintain a simmer. Keep covered and cook until the meats are tender, about 2 hours. If not finishing the kare-kare on the same day, uncover and let cool for 1 hour. Cover and refrigerate for at least 6 hours or up to overnight.</li>
+            <li>Skim off the fat from the top of the oxtails and short ribs and discard. Using tongs or a slotted spoon, transfer the oxtail and short ribs to a large bowl and reserve the cooking liquid (beef stock).</li>
+            <li>Transfer 1/2 cup of the warm beef stock to a small bowl, add 1 1/2 tablespoons of annatto powder, and stir until smooth.</li>
+            <li>Place 1/2 cup of mochiko rice flour in a large pot or Dutch oven. Cook over medium heat, stirring often, until light golden-brown and it has a nutty aroma, about 2 minutes. Transfer to a second small bowl, add 1 cup of the beef stock, and stir until smooth.</li>
+            <li>Mince 8 garlic cloves (about 3 tablespoons). Dice 1 medium yellow or white onion (about 1 1/2 cups).</li>
+            <li>Heat 2 tablespoons of vegetable oil in the same pot over medium heat until shimmering. Add the garlic and onion and sauté until soft and fragrant, about 10 minutes. Add the annatto mixture and stir to combine. Add the rice flour mixture and stir to combine.</li>
+            <li>Add 2 cups of creamy peanut butter, 1 teaspoon of kosher salt, and 1/2 teaspoon of black pepper. Stir until combined. Add 4 cups of the beef stock and whisk until smooth, creamy, and thick. Whisk in 1/2 to 1 cup more beef stock if needed if it’s too thick to whisk. Bring to a simmer. Cook, stirring often and reducing the heat as needed, for 5 to 8 minutes for the flavors to meld.</li>
+            <li>While the sauce is simmering, cut 12 ounces of long beans crosswise into 2-inch pieces (about 2 cups). Trim and cut 12 ounces of Japanese or Chinese eggplants crosswise on a slight diagonal into 2-inch-long pieces that are about 1/2-inch thick (about 3 cups). Halve 12 ounces of baby bok choy lengthwise through the core (quarter if large). Drain 1 (18-ounce) can of banana hearts if using.</li>
+            <li>Add the oxtails and short ribs to the sauce and gently stir to combine. Add the long beans, eggplant, bok choy, and banana hearts. Simmer, gently stirring occasionally, until the vegetables are tender, 10 to 20 minutes. Taste and season with more kosher salt as needed. Serve with bagoong guisado if desired and steamed rice.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- JS to Toggle Sidebar -->
+    <script>
+      const menuBtn = document.getElementById('menu-button');
+      const sidebar = document.getElementById('sidebar');
+      const closeBtn = document.getElementById('close-button');
+  
+      menuBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+      });
+  
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+      });
+    </script>
+  
+</body>
+</html>
