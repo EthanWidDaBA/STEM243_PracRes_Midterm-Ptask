@@ -9,10 +9,31 @@
 </head>
 <body>
     <!-- Banner Section -->
-    <div class="banner">
-        <h1>Welcome to Our Food Menu</h1>
-        <p>Choose your favorite category!</p>
-    </div>
+    <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 with text -->
+            <div class="carousel-item active">
+                <img src="css/banner1.png" class="d-block w-100" alt="Banner 1">
+            </div>
+            <!-- Slide 2 without text -->
+            <div class="carousel-item">
+                <img src="css/banner2.jpg" class="d-block w-100" alt="Banner 2">
+            </div>
+            <!-- Slide 3 with text -->
+            <div class="carousel-item">
+                <img src="css/banner3.png" class="d-block w-100" alt="Banner 3">
+            </div>
+        </div>
+
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 
     <!-- Feature Cards Section -->
     <div class="feature-cards-section my-5">
@@ -70,6 +91,9 @@
             <p class="card-text">This website is a project for our Computer Programming subject.</p>
             <p class="card-text">Made by: Jalmasco, Reyes, Mellevo, and Fallurin!</p>
         </div>
-    </footer>a
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>>

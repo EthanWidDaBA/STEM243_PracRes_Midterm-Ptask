@@ -17,6 +17,19 @@ body {
     border-bottom: 2px solid #d2b48c; /* Optional: Add a subtle border to complement the lighter brown */
 }
 
+#bannerCarousel {
+    border-radius: 15px; /* Adjust the value for more or less curvature */
+    overflow: hidden; /* Ensures content inside respects the border-radius */
+    padding: 50px; /* Add padding around the carousel */
+    /* Optional: Add a background color for the padding area */
+}
+
+.carousel-inner img {
+    width: 1600px;
+    height: 350px;
+    object-fit: auto; /* Ensures the image scales properly without distortion */
+}
+
 .card {
     background-color: #ffffff; /* White background for cards */
     border: 1px solid #dee2e6; /* Light border for subtle separation */
